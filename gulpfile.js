@@ -108,10 +108,10 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 gulp.task('deploy', function() {
 
 	var conn = ftp.create({
-		host:      '51.15.19.20',
-		user:      'aquagradususer',
-		password:  'JqD9F2dF9J41SoN',
-		parallel:  10,
+		host:      '213.186.35.224',
+		user:      'user16855',
+		password:  'pleifynsKV8T',
+		parallel:  5,
 		log: gutil.log
 	});
 
@@ -120,7 +120,7 @@ gulp.task('deploy', function() {
 	'dist/.htaccess',
 	];
 	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/www/standart.aquagradus.com/'));
+	.pipe(conn.dest('/www/spectr-aqua.com.ua/'));
 
 });
 

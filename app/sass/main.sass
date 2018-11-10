@@ -166,7 +166,9 @@ textarea
 .header
 	position: relative
 	width: 100%
+	// height: 100vh
 	background: #fff
+	background: url(../img/bg-y1.jpg) no-repeat 50% 200%
 	.header-nav
 		position: fixed
 		top: 0
@@ -306,45 +308,9 @@ textarea
 							width: rem(15)
 	.header-wellcome
 		padding-top: rem(40)
-		.header-bonus
-			position: absolute
-			top: rem(430)
-			right: rem(5)
-			width: rem(170)
-			padding: rem(5)
-			transition: all .5s ease
-			border: 4px solid $accent
-			z-index: 100
-			&.blink
-				transition: all .5s ease
-				border: 4px solid transparent
-			.bonus-title
-				font-size: 14px
-				text-align: center
-				margin-bottom: rem(5)
-			ul
-				li
-					text-align: center
-					img
-						width: 50%
-						margin: 0 auto
-					p
-						font-size: 12px
-						font-weight: bold
-						margin-top: rem(-10)
-			.akcii
-				margin-top: rem(5)
-				font-size: 12px
-				text-align: center
-				color: $accent
-			.timer
-				display: flex
-				justify-content: space-between
-				font-size: 14px
-				font-family: $logo-font
-				font-weight: bold
+		// background: url(../img/bg-y.jpg) no-repeat 50% 50%
 		.container-fluid
-			max-width: 1030px
+			max-width: 1200px
 			margin: 0 auto
 			height: 100%
 			.row
@@ -354,14 +320,15 @@ textarea
 					.h2
 						font-size: 18px
 						margin-top: rem(25)
-						margin-bottom: rem(-10)
+						// margin-bottom: rem(-10)
 					.h3
 						font-size: 48px
-						font-family: $logo-font
 						font-weight: bold
+						text-transform: uppercase
 					.standart
+						font-family: $logo-font
 						position: absolute
-						padding: none
+						padding: 0
 						border: none
 						top: 0
 						left: rem(258)
@@ -369,14 +336,6 @@ textarea
 						border-radius: 4px
 					.h1
 						font-size: 16px
-					.price
-						font-size: 18px
-						span
-							text-decoration: line-through
-							color: $red
-						strong
-							font-size: 26px
-							color: $accent
 					.check
 						margin-bottom: rem(5)
 						.check-item
@@ -384,80 +343,109 @@ textarea
 							width: 100%
 							vertical-align: middle
 							padding: rem(6) 0
-							.fa
-								font-size: 27px
-								color: $accent
-								margin-right: rem(15)
 							span
 								margin-top: auto
 								margin-bottom: auto
 								font-size: 14px
-					.img-1
-						vertical-align: middle
-						width: 95%
-						margin-left: -70px
-					.garanty-ph
-						position: absolute
-						bottom: rem(450)
-						left: rem(20)
-						max-width: rem(80)
-					.formAction
-						strong
-							font-size: 14px
-							.num
-								font-size: 22px
-								color: $accent
-								white-space: nowrap
-					.form
-						padding: rem(10) rem(10)
-						padding-right: 0
-						border-left: 3px solid $accent
-						width: 100%
+								line-height: rem(20)
+								vertical-align: middle
+								&:before
+									display: inline-block
+									width: rem(20)
+									height: rem(20)
+									text-align: center
+									font-weight: bold
+									color: #fff
+									margin-right: rem(10)
+									background-color: $accent
+									border: 1px solid #fff
+									border-radius: 100%
+									content: "+"
+					.tips-ico
 						display: flex
 						justify-content: space-between
-						flex-direction: column
-						.form-item
-							width: 100%
-							font-family: $else-font
-							padding-top: 16px
-							color: $black
-							padding-bottom: 16px
-							margin-bottom: rem(5)
-						.header-btn
-							padding: rem(14) rem(8)
-							font-size: 18px
-							background-color: $green
-							cursor: pointer
-							color: #fff
-							&:hover
-								background-color: darken($green, 10%)
-					.order
-						margin-top: rem(85)
-						position: relative
-						.order-bg
-							position: absolute
-							left: rem(-512)
-							bottom: 0
-							z-index: 0
-							display: none
-						.order-ico
-							position: absolute
-							bottom: rem(32)
-							width: 24px
-						strong
-							position: absolute
-							left: rem(40)
-							bottom: rem(10)
-							font-style: italic
-							font-size: 14px
-							.order-date
-								font-size: 18px
-								color: $accent
+						padding-top: rem(15)
+						flex-wrap: wrap
+						.tip
+							flex: 1 1
+							text-align: center
+							img
+								margin: 0 auto
+								width: rem(40)
+							p
+								margin: rem(5)
+								font-size: 12px
+								color: #000
 				.header-col-hd
-					display: none
 					.img-2
 						vertical-align: middle
-						width: 95%
+						margin: 0 auto
+						width: 50%
+				.header-form
+					display: flex
+					align-items: center
+					.form-first
+						padding: rem(25) rem(10) rem(10) rem(10)
+						border: 1px solid #ccc
+						background-color: rgba(255,255,255,.8)
+						box-shadow: 0 5px 10px #333
+						text-align: center
+						.price
+							font-size: 18px
+							padding: rem(5)
+							span
+								text-decoration: line-through
+								color: $red
+							strong
+								font-size: 26px
+								color: $accent
+						.formAction
+							strong
+								font-size: 14px
+								.num
+									font-size: 22px
+									color: $accent
+									white-space: nowrap
+						.akcii
+							display: flex
+							padding: rem(10)
+							flex-direction: column
+							.img-p
+								max-width: 38%
+								margin: 0 auto
+							.time-wrap
+								.timer
+									display: flex
+									font-size: 18px
+									margin-bottom: rem(10)
+									font-weight: bold
+									justify-content: center
+									#days1, #hours1, #minutes1, #seconds1
+										min-width: rem(32)
+										.delimiter
+											width: rem(15)
+						.form
+							width: 100%
+							display: flex
+							justify-content: space-between
+							flex-direction: column
+							.form-item
+								width: 100%
+								font-family: $else-font
+								padding-top: 16px
+								color: $black
+								padding-bottom: 16px
+								margin-bottom: rem(5)
+							.header-btn
+								padding: rem(14) rem(8)
+								font-size: 18px
+								background-color: $green
+								cursor: pointer
+								color: #fff
+								&:hover
+									background-color: darken($green, 10%)
+						p
+							font-size: 14px
 	#header-modal
 		#mW3
 			.modal-container
@@ -623,7 +611,7 @@ textarea
 /* Tips Start */
 
 .tips
-	background-color: $light-gray
+	// background-color: $light-gray
 	padding-top: rem(40)
 	padding-bottom: rem(40)
 	.container-fluid
@@ -755,9 +743,35 @@ textarea
 							background-color: $green
 							&:hover
 								background-color: darken($green, 10%)
-
-
 /* Video End */
+
+/* Homut Start */
+
+.homut
+	.container-fluid
+		padding-top: rem(30)
+		padding-bottom: rem(30)
+		.row
+			.col-md-6
+				padding: 0
+			.col-md-6
+				.h3
+					font-size: 32px
+					margin-bottom: rem(50)
+					position: relative
+					&:after
+						content: ""
+						width: rem(150)
+						height: 3px
+						background-color: $accent
+						position: absolute
+						left: 0
+						margin-top: rem(55)
+				p
+					text-align: center
+					font-size: 18px
+
+/* Homut End */
 
 /* Standart Start */
 
@@ -926,7 +940,7 @@ textarea
 					z-index: 1
 		.product
 			margin-top: rem(15)
-			border: 7px solid lighten($accent, 40%)
+			border: 7px solid lighten($accent, 20%)
 			padding: rem(25)
 			// text-align: left // attention
 			.title
@@ -1189,7 +1203,7 @@ textarea
 			padding: rem(15) // 320 rem(15)
 			padding-bottom: rem(40)
 			border-radius: 4px
-			background: url(/img/icons/stopwatch.png) no-repeat left bottom $accent
+			background: url(/img/icons/stopwatch.png) no-repeat left bottom lighten($accent, 20%)
 			.bonus-item
 				text-align: center
 				.img-box
@@ -1323,7 +1337,7 @@ textarea
 						font-size: 20px
 				.mode-box
 					padding: rem(20)
-					border: 6px solid lighten($accent, 40%)
+					border: 6px solid lighten($accent, 20%)
 					.row
 						.title
 							font-weight: bold
@@ -1415,11 +1429,11 @@ textarea
 						.tab-link-d
 							&:before
 								content: "5"
-					&:nth-child(6)
-						.tab-link,
-						.tab-link-d
-							&:before
-								content: "6"
+					// &:nth-child(6)
+					// 	.tab-link,
+					// 	.tab-link-d
+					// 		&:before
+					// 			content: "6"
 
 .mode
 	.container-fluid
@@ -1498,7 +1512,7 @@ textarea
 		.constr-row
 			flex-wrap: nowrap
 			.constructor-img
-				background: url(/img/constructor/20l-pro_big.jpg) no-repeat center top
+				background: url(/img/constructor/14l-pro_big.jpg) no-repeat center top
 				min-height: rem(280)
 				flex: 1 0 35%
 				background-size: contain
@@ -1518,7 +1532,7 @@ textarea
 						font-size: 40px
 				.constructor-controls-filter
 					// margin-top: rem(30)
-					border: 5px solid lighten($accent, 40%)
+					border: 5px solid lighten($accent, 20%)
 					padding: rem(5)
 					.constructor-controls-filter-valume
 						.constructor-label
@@ -1680,7 +1694,7 @@ textarea
 			.add-box
 				padding: rem(24)
 				margin-top: rem(24)
-				border: 5px solid lighten($accent, 40%)
+				border: 5px solid lighten($accent, 20%)
 			img
 				width: 130%
 .additionally-goods
@@ -1757,7 +1771,7 @@ textarea
 					margin-bottom: rem(8)
 				.good-content
 					margin-top: rem(30)
-					border: 5px solid lighten($accent, 40%)
+					border: 5px solid lighten($accent, 20%)
 					border-bottom: none
 					padding: rem(25) rem(45)
 					.h4
@@ -2065,7 +2079,7 @@ textarea
 				text-align: center
 				.modal-order-price
 					margin: rem(20) 0
-					border: 5px solid lighten($accent, 40%)
+					border: 5px solid lighten($accent, 20%)
 					position: relative
 					flex: 1 1 auto
 					padding: rem(15)
