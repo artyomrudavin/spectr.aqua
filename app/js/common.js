@@ -24,7 +24,28 @@
 // });
 
 
+// $(function() { // fridayblack
 
+// 	// When the user scrolls the page, execute myFunction
+// 	window.onscroll = function() {myFunction()};
+
+// 	// Get the navbar
+// 	var wehave = document.getElementById("header-text");
+// 	var navbar = document.getElementById("navbar");
+
+// 	// Get the offset position of the navbar
+// 	var showMenu = wehave.offsetTop;
+
+// 	// Add the sticky class to the navbar
+// 	function myFunction() {
+// 		if (window.pageYOffset >= showMenu) {
+// 			navbar.classList.add("showMenu")
+// 		} else {
+// 			navbar.classList.remove("showMenu");
+// 		}
+// 	}
+
+// });
 
 
 // Modal Control - Book
@@ -103,6 +124,29 @@ $(function() {
 	var modal = $('#header-modal.modal-mask');
 
 	$('#menu .btnHead').on('click', function(e) {
+		e.preventDefault();
+		modal.removeClass('hide');
+	});
+
+	$('.modal-close').on('click', function() {
+		modal.addClass('hide');
+	});
+
+	$(document).on('click', function(event) {
+		if ( event.target.id == 'mW3' ) {
+			modal.addClass('hide');
+		}
+	});
+
+});
+
+// Modal Control - Black friday
+
+$(function() { // fridayblack
+
+	var modal = $('#blackfriday-modal.modal-mask');
+
+	$('.bf-text-block .bf-btn').on('click', function(e) {
 		e.preventDefault();
 		modal.removeClass('hide');
 	});
@@ -528,7 +572,7 @@ $(function() {
 
 			if ( dataTk == 'fourteenTk' ) {
 				formOld.text('9 450₴');
-				formValue.text('8 450₴');
+				formValue.text('6 490₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/14l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -539,7 +583,7 @@ $(function() {
 				hiddenComment.val('Самогонный аппарат с баком на 14л');
 			} else if ( dataTk == 'twentyTk' ) {
 				formOld.text('9 950₴');
-				formValue.text('8 950₴');
+				formValue.text('6 990₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -550,7 +594,7 @@ $(function() {
 				hiddenComment.val('Самогонный аппарат с баком на 25л');
 			} else if ( dataTk == 'thirtyTk' ) {
 				formOld.text('10 450₴');
-				formValue.text('9 450₴');
+				formValue.text('7 490₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -561,7 +605,7 @@ $(function() {
 				hiddenComment.val('Самогонный аппарат с баком на 35л');
 			} else if ( dataTk == 'fiftyTk' ) {
 				formOld.text('10 950₴');
-				formValue.text('9 950₴');
+				formValue.text('7 990₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/50l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -584,7 +628,7 @@ $(function() {
 		formOld.hide();
 
 
-		formValue.text('5 950₴');
+		formValue.text('4 790₴');
 		imgConstr.css({
 			background: 'url(/img/constructor/pro_big.jpg)',
 			backgroundRepeat: 'no-repeat',
@@ -607,7 +651,7 @@ $(function() {
 			modalBtn.text('Купить колонну отдельно');
 		} else {
 			colVal.text('Колонна отдельно');
-			formValue.text('8 450₴');
+			formValue.text('6 490₴');
 			formOld.text('9 450₴');
 			formOld.show();
 			imgConstr.css({
@@ -670,7 +714,7 @@ $(function() {
 			modalBtn.text('Купить бак отдельно');
 		} else {
 			bakVal.text('Бак отдельно');
-			formValue.text('8 450₴');
+			formValue.text('6 490₴');
 			formOld.text('9 450₴');
 			formOld.show();
 			imgConstr.css({
@@ -942,9 +986,9 @@ $(function() {
 
 // Scroll to
 
-$(function() {
+$(function() { // fridayblack
 
-	$('.more a, #menu a, .goto a, .card-block a').click( function(){ // ловим клик по ссылке с классом go_to
+	$('.more a, #menu a, .goto a, .card-block a, .banner a, .bannerm a').click( function(){ // ловим клик по ссылке с классом go_to
 	var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
 	    $('html, body').animate({ scrollTop: $(scroll_el).offset().top - 75}, 2000); // анимируем скроолинг к элементу scroll_el
@@ -1048,10 +1092,13 @@ $(function() {
 
 //E-mail Ajax Send
 
-$(function() {
+$(function() { // fridayblack
 
-	$("#headerCall, #headerForm, #modalBook, #formBuy, #aboutCall, #formAdd, #question, #char-form, #formBonus, #formVideo, #formTank").submit(function() { //Change
+	$("#headerCall, #bf-call, #headerForm, #modalBook, #formBuy, #aboutCall, #formAdd, #question, #char-form, #formBonus, #formVideo, #formTank").submit(function() { //Change
 		var th = $(this);
+		var submitButton = th.find("button[type='submit']");
+		console.log(submitButton);
+		submitButton.addClass('btn-disable').prop("disabled", true);
 
 		$.ajax({
 			type: "POST",
@@ -1061,9 +1108,9 @@ $(function() {
 			// alert("Thank you!");
 			setTimeout(function() {
 				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-			location.href = "https://spectr-aqua.com.ua/sps/";
+				location.href = "https://spectr-aqua.com.ua/sps/";
+				// th.trigger("reset");
+			}, 500);
 		});
 		return false;
 	});

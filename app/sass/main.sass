@@ -161,6 +161,42 @@ textarea
 		background-color: darken($accent, 10%)
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 
+.showMenu
+	top: 0!important // fridayblack
+
+.btn-disable
+	background-color: $dark-gray!important
+	&:hover
+		cursor: default!important
+		box-shadow: none!important
+
+/* BlackFriday Banner Start */
+
+// .banner
+// 	display: none
+
+// .banner, .bannerm
+// 	margin: 0px
+// 	padding: 0px
+// 	text-align: center
+// 	a
+// 		text-decoration: none
+// 		display: block
+// 		background: #000
+// 		height: 60px
+// 		width: 100%
+// 		img
+// 			display: block
+// 			max-width: 1316px
+// 			margin: 0 auto
+// 			width: 100%
+
+// .bannerm
+// 	a
+// 		height: auto
+
+/* BlackFriday Banner End */
+
 /* Header Start */
 
 .header
@@ -171,7 +207,8 @@ textarea
 	background: url(../img/bg-y1.jpg) no-repeat 50% 200%
 	.header-nav
 		position: fixed
-		top: 0
+		top: 0 // fridayblack
+		// transition: .4s // fridayblack
 		width: 100%
 		z-index: 500
 		opacity: .95
@@ -207,6 +244,21 @@ textarea
 					flex-direction: column
 					flex: 1 1 auto
 					align-items: flex-end
+					.ct-phone
+						position: relative
+						padding-left: rem(25)
+						&:before
+							content: ""
+							width: rem(20)
+							height: rem(20)
+							top: 50%
+							transform: translateY(-50%)
+							position: absolute
+							left: 0
+							margin: 0
+							background: url(/img/phone-contact.png)
+							background-repeat: no-repeat
+							background-size: contain
 					.callta
 						color: $accent
 						font-size: 14px
@@ -269,6 +321,21 @@ textarea
 						display: none
 						z-index: 100
 						text-align: right
+						.ct-phone
+							position: relative
+							padding-left: rem(40)
+							&:before
+								content: ""
+								width: rem(30)
+								height: rem(30)
+								top: 50%
+								transform: translateY(-50%)
+								position: absolute
+								left: 0
+								margin: 0
+								background: url(/img/phone-contact.png)
+								background-repeat: no-repeat
+								background-size: contain
 						.callta
 							color: $accent
 						// .brd-btm
@@ -752,6 +819,46 @@ textarea
 							&:hover
 								background-color: darken($green, 10%)
 /* Video End */
+
+/* Blackfriday Start */
+
+.blackfriday
+	padding: rem(30) rem(30)
+	background: url(../img/right.jpg) center left no-repeat, url(../img/left.jpg) center right no-repeat, #000000
+	background-size: contain
+	.container
+		.bf-row
+			flex-direction: column
+			.bf-img-block
+				// width: 50%
+			.bf-text-block
+				// width: 50%
+				color: #fff
+				text-align: center
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				.aqua, .small-h
+					color: #0011ff
+					font-size: 38px
+					line-height: 38px
+					font-weight: bold
+				.aqua
+					margin-bottom: rem(20)
+					.logo-font
+						font-size: 42px
+				.img-responsive
+					margin: 0 auto
+				.small-h
+				.bf-adds
+					margin-bottom: rem(30)
+				.bf-btn
+					background-color: #c01926
+					// max-width: rem(200)
+					padding: rem(15) rem(30)
+
+/* Blackfriday End */
 
 /* Homut Start */
 
