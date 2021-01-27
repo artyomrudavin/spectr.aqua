@@ -1,53 +1,3 @@
-// Price changer
-
-// $(function() {
-
-// 	function nextMsg(i) {
-// 		if (messages.length == i) {
-// 			i = 0;
-// 		}
-// 		$('#message').html(messages[i]).fadeIn(500).delay(2000).fadeOut(500, function() {
-// 			nextMsg(i + 1);
-// 		});
-// 	};
-
-// 	var messages = [
-// 	"25л: <span>6 650грн</span>&nbsp;<strong>5 750</strong> грн",
-// 	"35л: <span>7 150грн</span>&nbsp;<strong>6 250</strong> грн",
-// 	"50л: <span>7 650грн</span>&nbsp;<strong>6 750</strong> грн"
-// 	];
-
-// 	$('#message').hide();
-
-// 	nextMsg(0);
-
-// });
-
-
-// $(function() { // fridayblack
-
-// 	// When the user scrolls the page, execute myFunction
-// 	window.onscroll = function() {myFunction()};
-
-// 	// Get the navbar
-// 	var wehave = document.getElementById("header-text");
-// 	var navbar = document.getElementById("navbar");
-
-// 	// Get the offset position of the navbar
-// 	var showMenu = wehave.offsetTop;
-
-// 	// Add the sticky class to the navbar
-// 	function myFunction() {
-// 		if (window.pageYOffset >= showMenu) {
-// 			navbar.classList.add("showMenu")
-// 		} else {
-// 			navbar.classList.remove("showMenu");
-// 		}
-// 	}
-
-// });
-
-
 // Modal Control - Book
 
 $(function() {
@@ -202,47 +152,47 @@ $(function() {
 		modal.removeClass('hide');
 
 		if ( $(this).attr('id') == 'carga' ) {
-			addPrice.text('1 190₴');
+			addPrice.text('850₴');
 			addTextm.text('Отвод под вытяжку');
 			hiddenComAdd.val('Отвод под вытяжку');
 			// console.log('carga');
 		} else if ( $(this).attr('id') == 'dioptr' ) {
-			addPrice.text('1 590₴');
+			addPrice.text('2 300₴');
 			addTextm.text('Инновационный диоптр 4 в 1');
 			hiddenComAdd.val('Инновационный диоптр 4 в 1');
 			// console.log('dioptr');
 		} else if ( $(this).attr('id') == 'popugai' ) {
-			addPrice.text('690₴');
+			addPrice.text('900₴');
 			addTextm.text('Непрерывный контроль крепости (Попугай)');
 			hiddenComAdd.val('Непрерывный контроль крепости (Попугай)');
 			// console.log('popugai');
 		} else if ( $(this).attr('id') == 'rashiga' ) {
-			addPrice.text('710₴');
+			addPrice.text('850₴');
 			addTextm.text('Кольца Рашига 1 кг');
 			hiddenComAdd.val('Кольца Рашига 1 кг');
 			// console.log('rashiga');
 		} else if ( $(this).attr('id') == 'areom' ) {
-			addPrice.text('350₴');
+			addPrice.text('550₴');
 			addTextm.text('Набор профессиональных ареометров и мерная колба');
 			hiddenComAdd.val('Набор профессиональных ареометров и мерная колба');
 			// console.log('areom');
 		} else if ( $(this).attr('id') == 'komplOhl' ) {
-			addPrice.text('1000₴');
+			addPrice.text('1150₴');
 			addTextm.text('СПН');
 			hiddenComAdd.val('СПН');
 			// console.log('drogi');
 		} else if ( $(this).attr('id') == 'ugol' ) {
-			addPrice.text('750₴');
+			addPrice.text('850₴');
 			addTextm.text('Угольная колонна AquaGradus');
 			hiddenComAdd.val('Угольная колонна AquaGradus');
 			// console.log('drogi');
 		} else if ( $(this).attr('id') == 'regMosh' ) {
-			addPrice.text('1 550₴');
+			addPrice.text('1 850₴');
 			addTextm.text('Регулятор мощности нагрева АГ-2');
 			hiddenComAdd.val('Регулятор мощности нагрева АГ-2');
 			// console.log('drogi');
 		} else if ( $(this).attr('id') == 'ten' ) {
-			addPrice.text('250₴');
+			addPrice.text('350₴');
 			addTextm.text('Водяной ТЭН для самогонного аппарат');
 			hiddenComAdd.val('Водяной ТЭН для самогонного аппарат');
 			// console.log('drogi');
@@ -524,7 +474,7 @@ $(function() {
 		if ( bakVal.hasClass('active') ) {
 			formOld.hide();
 			if ( dataTk == 'fourteenTk' ) {
-				formValue.text('2 800₴');
+				formValue.text('3 200₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/14l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -535,7 +485,7 @@ $(function() {
 				hiddenComment.val('Бак Aquagradus Спектр на 14л');
 				// console.log(hiddenComment.val());
 			} else if ( dataTk == 'twentyTk' ) {
-				formValue.text('3 200₴');
+				formValue.text('3 700₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -545,7 +495,7 @@ $(function() {
 				mtextValue.text('Бак Aquagradus Спектр на 25л');
 				hiddenComment.val('Бак Aquagradus Спектр на 25л');
 			} else if ( dataTk == 'thirtyTk' ) {
-				formValue.text('3 700₴');
+				formValue.text('4 300₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -555,7 +505,7 @@ $(function() {
 				mtextValue.text('Бак Aquagradus Спектр на 35л');
 				hiddenComment.val('Бак Aquagradus Спектр на 35л');
 			} else if ( dataTk == 'fiftyTk' ) {
-				formValue.text('4 200₴');
+				formValue.text('4 900₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/50l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -571,8 +521,8 @@ $(function() {
 			formOld.show();
 
 			if ( dataTk == 'fourteenTk' ) {
-				formOld.text('9 450₴');
-				formValue.text('6 490₴');
+				formOld.text('8 690₴');
+				formValue.text('7 490₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/14l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -582,8 +532,8 @@ $(function() {
 				mtextValue.text('Самогонный аппарат с баком на 14л');
 				hiddenComment.val('Самогонный аппарат с баком на 14л');
 			} else if ( dataTk == 'twentyTk' ) {
-				formOld.text('9 950₴');
-				formValue.text('6 990₴');
+				formOld.text('9 190₴');
+				formValue.text('7 990₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -593,8 +543,8 @@ $(function() {
 				mtextValue.text('Самогонный аппарат с баком на 25л');
 				hiddenComment.val('Самогонный аппарат с баком на 25л');
 			} else if ( dataTk == 'thirtyTk' ) {
-				formOld.text('10 450₴');
-				formValue.text('7 490₴');
+				formOld.text('9 790₴');
+				formValue.text('8 590₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -604,8 +554,8 @@ $(function() {
 				mtextValue.text('Самогонный аппарат с баком на 35л');
 				hiddenComment.val('Самогонный аппарат с баком на 35л');
 			} else if ( dataTk == 'fiftyTk' ) {
-				formOld.text('10 950₴');
-				formValue.text('7 990₴');
+				formOld.text('10 390₴');
+				formValue.text('9 190₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/50l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -628,7 +578,7 @@ $(function() {
 		formOld.hide();
 
 
-		formValue.text('4 790₴');
+		formValue.text('5 500₴');
 		imgConstr.css({
 			background: 'url(/img/constructor/pro_big.jpg)',
 			backgroundRepeat: 'no-repeat',
@@ -651,8 +601,8 @@ $(function() {
 			modalBtn.text('Купить колонну отдельно');
 		} else {
 			colVal.text('Колонна отдельно');
-			formValue.text('6 490₴');
-			formOld.text('9 450₴');
+			formValue.text('7 490₴');
+			formOld.text('8 690₴');
 			formOld.show();
 			imgConstr.css({
 				background: 'url(/img/constructor/14l-pro_big.jpg)',
@@ -687,7 +637,7 @@ $(function() {
 		formOld.hide();
 
 
-		formValue.text('2 800₴');
+		formValue.text('3 200₴');
 		imgConstr.css({
 			background: 'url(/img/constructor/14l-nocolumn_big.jpg)',
 			backgroundRepeat: 'no-repeat',
@@ -714,8 +664,8 @@ $(function() {
 			modalBtn.text('Купить бак отдельно');
 		} else {
 			bakVal.text('Бак отдельно');
-			formValue.text('6 490₴');
-			formOld.text('9 450₴');
+			formValue.text('7 490₴');
+			formOld.text('8 690₴');
 			formOld.show();
 			imgConstr.css({
 				background: 'url(/img/constructor/14l-pro_big.jpg)',

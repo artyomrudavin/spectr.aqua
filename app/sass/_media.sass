@@ -62,6 +62,20 @@
 							height: rem(40)
 						p
 							font-size: 10px
+					.phone-mobile
+						.ct-phone
+							position: relative
+							padding-left: rem(25)
+							&:before
+								content: ""
+				.header-navbar
+					#menu
+						.head-ph
+							.ct-phone
+								position: relative
+								padding-left: rem(35)
+								&:before
+									content: ""
 		.header-wellcome
 			padding-top: rem(67)
 			.container-fluid
@@ -360,7 +374,7 @@
 				flex-direction: row
 				.header-brand
 					width: inherit
-					.phone-mobile, .icon
+					.phone-mobile, .icon, .local-mob
 						display: none
 				.header-navbar
 					#menu
@@ -381,7 +395,7 @@
 							display: block	
 				.time-wrap
 					flex-direction: column
-					width: 90%
+					width: 60%
 					height: 100%
 					p
 						margin-bottom: rem(-10)
@@ -389,6 +403,8 @@
 						font-size: 24px
 						#days1, #hours1, #minutes1, #seconds1
 							min-width: rem(36)
+				.local-desc
+					display: block
 		.header-wellcome
 			.header-bonus
 				top: rem(90)
@@ -453,7 +469,7 @@
 
 	/* Video Start */
 
-	.video
+	.video-block
 		.container-fluid
 			.row
 				.col-md-4

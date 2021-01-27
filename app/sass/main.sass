@@ -131,8 +131,8 @@ textarea
 	max-width: 100%
 	height: auto
 
-.num
-	font-family: $else-font
+// .num
+// 	font-family: $else-font
 
 .hide
 	display: none
@@ -237,18 +237,18 @@ textarea
 						text-align: center
 						font-size: 7px
 				.phone-mobile
-					font-family: $else-font
+					font-family: $default-font
 					font-weight: bold
-					font-size: 16px
+					font-size: 14px
 					display: flex
 					flex-direction: column
 					flex: 1 1 auto
 					align-items: flex-end
 					.ct-phone
-						position: relative
-						padding-left: rem(25)
+						// position: relative
+						// padding-left: rem(25)
 						&:before
-							content: ""
+							// content: ""
 							width: rem(20)
 							height: rem(20)
 							top: 50%
@@ -302,6 +302,9 @@ textarea
 							top: 0
 							transform: rotate(135deg)
 			.header-navbar
+				display: flex
+				flex: 1 0 auto
+				justify-content: flex-end
 				#menu
 					display: none
 					flex-direction: column
@@ -315,7 +318,7 @@ textarea
 							&:hover
 								color: $accent
 					.head-ph
-						font-family: $else-font
+						font-family: $default-font
 						font-weight: bold
 						font-size: 14px
 						display: none
@@ -352,7 +355,7 @@ textarea
 				display: flex
 				position: absolute
 				width: 100%
-				left: 0
+				// left: 0
 				justify-content: center
 				align-items: center
 				transition: 0.4s linear
@@ -381,6 +384,28 @@ textarea
 						min-width: rem(32)
 						.delimiter
 							width: rem(15)
+		.local
+			height: 100%
+			flex: 0 1 auto
+			margin-left: 10px
+			.lang__control
+				display: flex
+				flex-direction: column
+				height: 100%
+				li
+					a
+						display: block
+						font-size: rem(14)
+						padding: rem(3) rem(6)
+						background-color: #ccc
+						color: #fff
+						transition: .4s
+						&:hover
+							background-color: $accent
+					.lang-active
+						background-color: $accent
+		.local-desc
+			display: none
 	.header-wellcome
 		padding-top: rem(40)
 		// background: url(../img/bg-y.jpg) no-repeat 50% 50%
@@ -506,7 +531,7 @@ textarea
 							flex-direction: column
 							.form-item
 								width: 100%
-								font-family: $else-font
+								// font-family: $else-font
 								padding-top: 16px
 								color: $black
 								padding-bottom: 16px
@@ -738,7 +763,7 @@ textarea
 
 /* Video Start */
 
-.video
+.video-block
 	padding-top: rem(30)
 	padding-bottom: rem(60)
 	.container-fluid
@@ -782,18 +807,50 @@ textarea
 							margin-right: rem(10)
 							flex: 0 0 auto
 			.col-md-8
-				.videoWrapper
+				.video
 					position: relative
-					padding-bottom: 56.25%
+					width: 100%
 					height: 0
+					padding-bottom: 56.25%
 					border: 2px solid $accent
 					margin-bottom: rem(20)
-					iframe
+					&:hover
+						.video__button
+							.video__button-shape
+								fill: #ff0000
+								fill-opacity: 1
+					.video__media
 						position: absolute
 						top: 0
 						left: 0
 						width: 100%
 						height: 100%
+						border: 0
+					.video__button
+						position: absolute
+						top: 50%
+						left: 50%
+						padding: 0
+						width: rem(68)
+						height: rem(48)
+						border: none
+						background-color: transparent
+						transform: translate(-50%,-50%)
+						outline: none
+						display: none
+						.video__button-shape
+							fill: #212121
+							fill-opacity: .8
+						.video__button-icon
+							fill: #fff
+						&:focus
+							.video__button-shape
+								fill: #ff0000
+								fill-opacity: 1
+				.video--enabled
+					cursor: pointer
+					.video__button
+						display: block
 			.col-md-12
 				text-align: center
 				padding: rem(12)
@@ -1025,7 +1082,7 @@ textarea
 			.bk-val, .car-val, .suh-val
 				font-size: 14px
 				span
-					font-family: $else-font
+					// font-family: $else-font
 			.car-val, .suh-val
 				&.active
 					color: $green
@@ -2119,7 +2176,7 @@ textarea
 					a
 						display: block // lg inline-block xs block
 						width: 100% // lg 50% xs 100%
-						font-family: $else-font
+						// font-family: $else-font
 						color: #fff
 				p, div, .title
 					margin-bottom: rem(8)
